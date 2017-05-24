@@ -1,4 +1,4 @@
-# Copyright (C) 2015 jOVAL.org.  All rights reserved.
+# Copyright (C) 2016 JovalCM.com.  All rights reserved.
 # This software is licensed under the LGPL 3.0 license available at http://www.gnu.org/licenses/lgpl.txt
 
 TOP=$(realpath .)
@@ -15,7 +15,7 @@ all: $(SCAP_LIB) $(SCAP_EXT_LIB) $(DOCS)/index.html $(CYBERSCOPE_LIB) $(DODARF_L
 
 $(DOCS)/index.html: $(SCAP_LIB) $(SCAP_EXT_LIB)
 	mkdir -p $(DOCS)
-	$(JAVADOC) -J-Xmx512m -d $(DOCS) -sourcepath $(SOURCEPATH) -subpackages org:scap
+	$(JAVADOC) $(JAVADOCFLAGS) -d $(DOCS) -sourcepath $(SOURCEPATH) -subpackages org:scap
 
 $(SCAP_LIB): $(SCAP)/$(BINDINGS)
 	@$(MAKE) --directory=$(SCAP)

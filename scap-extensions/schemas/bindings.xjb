@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-  Copyright (C) 2015 JovalCM.com.  All rights reserved.
+  Copyright (C) 2016 JovalCM.com.  All rights reserved.
   This software is licensed under the LGPL 3.0 license available at http://www.gnu.org/licenses/lgpl.txt
 
 -->
-<jxb:bindings version="1.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<jxb:bindings version="2.0"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix">
   <jxb:bindings>
     <jxb:globalBindings generateIsSetMethod="true"/>
   </jxb:bindings>
@@ -16,6 +19,9 @@
     <jxb:schemaBindings>
       <jxb:package name="scap.oval.def.linux.extended"/>
     </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-linux-def"/>
+    </jxb:bindings>
     <!-- avoid overloading the operation attribute -->
     <jxb:bindings node="xs:element[@name='apt_state']//xs:element[@name='operation']">
         <jxb:property name="dpkg_operation" />
@@ -25,9 +31,44 @@
     <jxb:schemaBindings>
       <jxb:package name="scap.oval.sc.linux.extended"/>
     </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-linux-sc"/>
+    </jxb:bindings>
     <!-- avoid overloading the operation attribute -->
     <jxb:bindings node="xs:element[@name='apt_item']//xs:element[@name='operation']">
         <jxb:property name="dpkg_operation" />
+    </jxb:bindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="x-shellcommand-definitions-schema.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="scap.oval.def.independent.extended"/>
+    </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-ind-def"/>
+    </jxb:bindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="x-shellcommand-system-characteristics-schema.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="scap.oval.sc.independent.extended"/>
+    </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-ind-sc"/>
+    </jxb:bindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="x-windows-definitions-schema.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="scap.oval.def.windows.extended"/>
+    </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-win-def"/>
+    </jxb:bindings>
+  </jxb:bindings>
+  <jxb:bindings schemaLocation="x-windows-system-characteristics-schema.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="scap.oval.sc.windows.extended"/>
+    </jxb:schemaBindings>
+    <jxb:bindings>
+      <namespace:prefix name="x-win-sc"/>
     </jxb:bindings>
   </jxb:bindings>
 </jxb:bindings>

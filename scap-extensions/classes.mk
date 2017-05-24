@@ -1,4 +1,9 @@
 CLASSES=\
+	scap.oval.def.independent.extended.ObjectFactory	\
+	scap.oval.def.independent.extended.package-info	\
+	scap.oval.def.independent.extended.ShellcommandObject	\
+	scap.oval.def.independent.extended.ShellcommandState	\
+	scap.oval.def.independent.extended.ShellcommandTest	\
 	scap.oval.def.linux.extended.AptBehaviors	\
 	scap.oval.def.linux.extended.AptObject	\
 	scap.oval.def.linux.extended.AptState	\
@@ -6,7 +11,19 @@ CLASSES=\
 	scap.oval.def.linux.extended.EntityStateDpkgOperationType	\
 	scap.oval.def.linux.extended.ObjectFactory	\
 	scap.oval.def.linux.extended.package-info	\
+	scap.oval.def.windows.extended.CbsComponentApplicableBehaviors	\
+	scap.oval.def.windows.extended.CbscomponentapplicableObject	\
+	scap.oval.def.windows.extended.CbscomponentapplicableState	\
+	scap.oval.def.windows.extended.CbscomponentapplicableTest	\
+	scap.oval.def.windows.extended.ObjectFactory	\
+	scap.oval.def.windows.extended.package-info	\
+	scap.oval.sc.independent.extended.ObjectFactory	\
+	scap.oval.sc.independent.extended.package-info	\
+	scap.oval.sc.independent.extended.ShellcommandItem	\
 	scap.oval.sc.linux.extended.AptItem	\
 	scap.oval.sc.linux.extended.EntityItemDpkgOperationType	\
 	scap.oval.sc.linux.extended.ObjectFactory	\
-	scap.oval.sc.linux.extended.package-info
+	scap.oval.sc.linux.extended.package-info	\
+	scap.oval.sc.windows.extended.CbscomponentapplicableItem	\
+	scap.oval.sc.windows.extended.ObjectFactory	\
+	scap.oval.sc.windows.extended.package-info

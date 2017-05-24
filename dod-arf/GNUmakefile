@@ -7,9 +7,8 @@ include $(TOP)/common.mk
 CLASSPATH="$(CLASSLIB)$(CLN)$(SCAP_LIB)$(CLN)$(GEN)"
 
 include classes.mk
-include schemas.mk
 
-SCHEMA_FILES:=$(foreach schema, $(SCHEMAS), $(SCHEMADIR)/$(schema))
+SCHEMA_FILES:=$(shell for file in `find $(SCHEMADIR) -type f -name *.xsd | grep -v xml.xsd`; do echo $$file; done)
 CLASS_FILES:=$(foreach class, $(CLASSES), $(BUILD)/$(subst .,/,$(class)).class)
 PACKAGES=$(sort $(basename $(CLASSES)))
 PACKAGEDIRS=$(subst .,/,$(PACKAGES))
@@ -20,7 +19,7 @@ $(DODARF_LIB): $(GEN) classes resources $(DOCS)
 	$(JAR) cvf $@ -C $(BUILD)/ .
 
 $(DOCS): $(GEN)
-	$(JAVADOC) -J-Xmx512m -d $(DOCS) -sourcepath $(GEN) -subpackages org:mil.disa
+	$(JAVADOC) $(JAVADOCFLAGS) -d $(DOCS) -sourcepath $(GEN) -subpackages gov:mil.disa
 
 clean:
 	rm -f $(EPISODE)
@@ -33,7 +32,7 @@ resources:
 	mkdir -p $(BUILD)/META-INF
 	sed 's/$(BROKEN)/$(FIXED)/' $(EPISODE) > $(BUILD)/META-INF/sun-jaxb.episode
 	mkdir -p $(BUILD)/dodarf/schemas
-	cp $(CATALOG) $(BUILD)/dodarf
+	mv $(CATALOG) $(BUILD)/dodarf
 	cp $(RSRC)/registry.ini $(BUILD)/dodarf
 	cp -R $(SCHEMADIR)/* $(BUILD)/dodarf/schemas
 	rm $(BUILD)/dodarf/schemas/bindings.xjb
@@ -42,9 +41,13 @@ classes: classdirs $(CLASS_FILES)
 
 classdirs: $(foreach pkg, $(PACKAGEDIRS), $(BUILD)/$(pkg)/)
 
-$(GEN): $(SCHEMA_FILES)
+$(CATALOG): $(CATALOG_TEMPLATE)
+	cat $< | sed 's/\[OVAL_VERSION\]/$(OVAL_VERSION)/g' > $@
+
+$(GEN): $(SCHEMA_FILES) $(CATALOG)
 	mkdir -p $@
-	$(XJC) -verbose $(XJCFLAGS_EXT) $(SCHEMA_FILES) $(SCAP_LIB) -b $(BINDINGS) -d $(GEN)
+	$(XJC) $(XJCFLAGS_EXT) $(SCHEMA_FILES) $(SCAP_LIB) -b $(BINDINGS) -d $(GEN)
+	find $(GEN) -name ObjectFactory.java | grep scap\.cpe | xargs rm
 
 $(BUILD)/%.class: $(GEN)/%.java
 	$(JAVAC) $(JAVACFLAGS) -d $(BUILD) -classpath $(CLASSPATH) $<

@@ -8,6 +8,15 @@ CLASSES=\
 	org.gocil.diagnostics.QuestionnaireRef	\
 	org.gocil.diagnostics.QuestionnaireType	\
 	org.gocil.diagnostics.QuestionRef	\
+	org.iso.svrl.ActivePattern      \
+	org.iso.svrl.DiagnosticReference	\
+	org.iso.svrl.FailedAssert       \
+	org.iso.svrl.FiredRule  \
+	org.iso.svrl.NsPrefixInAttributeValues  \
+	org.iso.svrl.ObjectFactory      \
+	org.iso.svrl.package-info       \
+	org.iso.svrl.SchematronOutput   \
+	org.iso.svrl.SuccessfulReport	\
 	org.joval.scap.diagnostics.CheckDiagnostics	\
 	org.joval.scap.diagnostics.Error	\
 	org.joval.scap.diagnostics.ObjectFactory	\
@@ -83,6 +92,97 @@ CLASSES=\
 	org.purl.dc.ElementType	\
 	org.purl.dc.ObjectFactory	\
 	org.purl.dc.package-info	\
+	org.w3c.xhtml.A	\
+	org.w3c.xhtml.Abbr	\
+	org.w3c.xhtml.AContent	\
+	org.w3c.xhtml.Acronym	\
+	org.w3c.xhtml.Address	\
+	org.w3c.xhtml.Area	\
+	org.w3c.xhtml.B	\
+	org.w3c.xhtml.Base	\
+	org.w3c.xhtml.Bdo	\
+	org.w3c.xhtml.Big	\
+	org.w3c.xhtml.Block	\
+	org.w3c.xhtml.Blockquote	\
+	org.w3c.xhtml.Body	\
+	org.w3c.xhtml.Br	\
+	org.w3c.xhtml.Button	\
+	org.w3c.xhtml.ButtonContent	\
+	org.w3c.xhtml.Caption	\
+	org.w3c.xhtml.Cite	\
+	org.w3c.xhtml.Code	\
+	org.w3c.xhtml.Col	\
+	org.w3c.xhtml.Colgroup	\
+	org.w3c.xhtml.Dd	\
+	org.w3c.xhtml.Del	\
+	org.w3c.xhtml.Dfn	\
+	org.w3c.xhtml.Div	\
+	org.w3c.xhtml.Dl	\
+	org.w3c.xhtml.Dt	\
+	org.w3c.xhtml.Em	\
+	org.w3c.xhtml.Fieldset	\
+	org.w3c.xhtml.Flow	\
+	org.w3c.xhtml.Form	\
+	org.w3c.xhtml.FormContent	\
+	org.w3c.xhtml.H1	\
+	org.w3c.xhtml.H2	\
+	org.w3c.xhtml.H3	\
+	org.w3c.xhtml.H4	\
+	org.w3c.xhtml.H5	\
+	org.w3c.xhtml.H6	\
+	org.w3c.xhtml.Head	\
+	org.w3c.xhtml.Hr	\
+	org.w3c.xhtml.Html	\
+	org.w3c.xhtml.I	\
+	org.w3c.xhtml.Img	\
+	org.w3c.xhtml.Inline	\
+	org.w3c.xhtml.Input	\
+	org.w3c.xhtml.InputType	\
+	org.w3c.xhtml.Ins	\
+	org.w3c.xhtml.Kbd	\
+	org.w3c.xhtml.Label	\
+	org.w3c.xhtml.Legend	\
+	org.w3c.xhtml.Li	\
+	org.w3c.xhtml.Link	\
+	org.w3c.xhtml.Map	\
+	org.w3c.xhtml.Meta	\
+	org.w3c.xhtml.Noscript	\
+	org.w3c.xhtml.Object	\
+	org.w3c.xhtml.ObjectFactory	\
+	org.w3c.xhtml.Ol	\
+	org.w3c.xhtml.Optgroup	\
+	org.w3c.xhtml.Option	\
+	org.w3c.xhtml.P	\
+	org.w3c.xhtml.package-info	\
+	org.w3c.xhtml.Param	\
+	org.w3c.xhtml.Pre	\
+	org.w3c.xhtml.PreContent	\
+	org.w3c.xhtml.Q	\
+	org.w3c.xhtml.Samp	\
+	org.w3c.xhtml.Scope	\
+	org.w3c.xhtml.Script	\
+	org.w3c.xhtml.Select	\
+	org.w3c.xhtml.Shape	\
+	org.w3c.xhtml.Small	\
+	org.w3c.xhtml.Span	\
+	org.w3c.xhtml.Strong	\
+	org.w3c.xhtml.Style	\
+	org.w3c.xhtml.Sub	\
+	org.w3c.xhtml.Sup	\
+	org.w3c.xhtml.Table	\
+	org.w3c.xhtml.Tbody	\
+	org.w3c.xhtml.Td	\
+	org.w3c.xhtml.Textarea	\
+	org.w3c.xhtml.Tfoot	\
+	org.w3c.xhtml.TFrame	\
+	org.w3c.xhtml.Th	\
+	org.w3c.xhtml.Thead	\
+	org.w3c.xhtml.Title	\
+	org.w3c.xhtml.Tr	\
+	org.w3c.xhtml.TRules	\
+	org.w3c.xhtml.Tt	\
+	org.w3c.xhtml.Ul	\
+	org.w3c.xhtml.Var	\
 	org.w3c.xml.signature.CanonicalizationMethodType	\
 	org.w3c.xml.signature.DigestMethodType	\
 	org.w3c.xml.signature.DSAKeyValueType	\
@@ -456,6 +556,7 @@ CLASSES=\
 	scap.oval.def.catos.VersionObject	\
 	scap.oval.def.catos.VersionState	\
 	scap.oval.def.catos.VersionTest	\
+	scap.oval.def.core.AffectedCPEListType	\
 	scap.oval.def.core.AffectedType	\
 	scap.oval.def.core.ArithmeticEnumeration	\
 	scap.oval.def.core.ArithmeticFunctionType	\
@@ -500,6 +601,8 @@ CLASSES=\
 	scap.oval.def.core.EntityStateStringType	\
 	scap.oval.def.core.EntityStateVersionType	\
 	scap.oval.def.core.EscapeRegexFunctionType	\
+	scap.oval.def.core.ExpectedResults	\
+	scap.oval.def.core.ExpectedResultType	\
 	scap.oval.def.core.ExtendDefinitionType	\
 	scap.oval.def.core.ExternalVariable	\
 	scap.oval.def.core.Filter	\
@@ -507,6 +610,9 @@ CLASSES=\
 	scap.oval.def.core.GlobToRegexFunctionType	\
 	scap.oval.def.core.LiteralComponentType	\
 	scap.oval.def.core.LocalVariable	\
+	scap.oval.def.core.MetadataContributorType	\
+	scap.oval.def.core.MetadataDatesType	\
+	scap.oval.def.core.MetadataStatusEnumeration	\
 	scap.oval.def.core.MetadataType	\
 	scap.oval.def.core.Notes	\
 	scap.oval.def.core.ObjectComponentType	\
@@ -515,6 +621,7 @@ CLASSES=\
 	scap.oval.def.core.ObjectsType	\
 	scap.oval.def.core.ObjectType	\
 	scap.oval.def.core.OvalDefinitions	\
+	scap.oval.def.core.OvalRepository	\
 	scap.oval.def.core.package-info	\
 	scap.oval.def.core.PossibleRestrictionType	\
 	scap.oval.def.core.PossibleValueType	\
@@ -776,6 +883,9 @@ CLASSES=\
 	scap.oval.def.junos.XmlShowObject	\
 	scap.oval.def.junos.XmlShowState	\
 	scap.oval.def.junos.XmlShowTest	\
+	scap.oval.def.linux.ApparmorstatusObject	\
+	scap.oval.def.linux.ApparmorstatusState	\
+	scap.oval.def.linux.ApparmorstatusTest	\
 	scap.oval.def.linux.DpkginfoObject	\
 	scap.oval.def.linux.DpkginfoState	\
 	scap.oval.def.linux.DpkginfoTest	\
@@ -863,6 +973,9 @@ CLASSES=\
 	scap.oval.def.macos.Plist510Object	\
 	scap.oval.def.macos.Plist510State	\
 	scap.oval.def.macos.Plist510Test	\
+	scap.oval.def.macos.Plist511Object	\
+	scap.oval.def.macos.Plist511State	\
+	scap.oval.def.macos.Plist511Test	\
 	scap.oval.def.macos.PlistObject	\
 	scap.oval.def.macos.PlistState	\
 	scap.oval.def.macos.PlistTest	\
@@ -1107,6 +1220,7 @@ CLASSES=\
 	scap.oval.def.windows.EntityStateAuditType	\
 	scap.oval.def.windows.EntityStateCmdletVerbType	\
 	scap.oval.def.windows.EntityStateDriveTypeType	\
+	scap.oval.def.windows.EntityStateFileAttributeType	\
 	scap.oval.def.windows.EntityStateFileTypeType	\
 	scap.oval.def.windows.EntityStateGUIDType	\
 	scap.oval.def.windows.EntityStateInterfaceTypeType	\
@@ -1154,6 +1268,9 @@ CLASSES=\
 	scap.oval.def.windows.InterfaceObject	\
 	scap.oval.def.windows.InterfaceState	\
 	scap.oval.def.windows.InterfaceTest	\
+	scap.oval.def.windows.JunctionObject	\
+	scap.oval.def.windows.JunctionState	\
+	scap.oval.def.windows.JunctionTest	\
 	scap.oval.def.windows.LicenseObject	\
 	scap.oval.def.windows.LicenseState	\
 	scap.oval.def.windows.LicenseTest	\
@@ -1208,6 +1325,7 @@ CLASSES=\
 	scap.oval.def.windows.RegkeyeffectiverightsObject	\
 	scap.oval.def.windows.RegkeyeffectiverightsState	\
 	scap.oval.def.windows.RegkeyeffectiverightsTest	\
+	scap.oval.def.windows.ServiceEffectiveRightsBehaviors	\
 	scap.oval.def.windows.ServiceeffectiverightsObject	\
 	scap.oval.def.windows.ServiceeffectiverightsState	\
 	scap.oval.def.windows.ServiceeffectiverightsTest	\
@@ -1495,6 +1613,7 @@ CLASSES=\
 	scap.oval.sc.junos.VersionItem	\
 	scap.oval.sc.junos.XmlConfigItem	\
 	scap.oval.sc.junos.XmlShowItem	\
+	scap.oval.sc.linux.ApparmorstatusItem	\
 	scap.oval.sc.linux.DpkginfoItem	\
 	scap.oval.sc.linux.EntityItemProtocolType	\
 	scap.oval.sc.linux.EntityItemRpmVerifyResultType	\
@@ -1527,6 +1646,7 @@ CLASSES=\
 	scap.oval.sc.macos.NvramItem	\
 	scap.oval.sc.macos.ObjectFactory	\
 	scap.oval.sc.macos.package-info	\
+	scap.oval.sc.macos.Plist511Item	\
 	scap.oval.sc.macos.PlistItem	\
 	scap.oval.sc.macos.Pwpolicy59Item	\
 	scap.oval.sc.macos.PwpolicyItem	\
@@ -1626,6 +1746,7 @@ CLASSES=\
 	scap.oval.sc.windows.EntityItemAuditType	\
 	scap.oval.sc.windows.EntityItemCmdletVerbType	\
 	scap.oval.sc.windows.EntityItemDriveTypeType	\
+	scap.oval.sc.windows.EntityItemFileAttributeType	\
 	scap.oval.sc.windows.EntityItemFileTypeType	\
 	scap.oval.sc.windows.EntityItemGUIDType	\
 	scap.oval.sc.windows.EntityItemInterfaceTypeType	\
@@ -1650,6 +1771,7 @@ CLASSES=\
 	scap.oval.sc.windows.GroupItem	\
 	scap.oval.sc.windows.GroupSidItem	\
 	scap.oval.sc.windows.InterfaceItem	\
+	scap.oval.sc.windows.JunctionItem	\
 	scap.oval.sc.windows.LicenseItem	\
 	scap.oval.sc.windows.LockoutpolicyItem	\
 	scap.oval.sc.windows.MetabaseItem	\
@@ -1685,6 +1807,7 @@ CLASSES=\
 	scap.oval.variables.package-info	\
 	scap.oval.variables.VariablesType	\
 	scap.oval.variables.VariableType	\
+	scap.xccdf.BenchmarkReferenceType	\
 	scap.xccdf.CcOperatorEnumType	\
 	scap.xccdf.CheckContentRefType	\
 	scap.xccdf.CheckContentType	\
@@ -1717,7 +1840,6 @@ CLASSES=\
 	scap.xccdf.NoticeType	\
 	scap.xccdf.ObjectFactory	\
 	scap.xccdf.OverrideableCPE2IdrefType	\
-	scap.xccdf.OverrideableIdrefType	\
 	scap.xccdf.OverrideType	\
 	scap.xccdf.package-info	\
 	scap.xccdf.ParamType	\
@@ -1747,8 +1869,12 @@ CLASSES=\
 	scap.xccdf.StatusType	\
 	scap.xccdf.SubType	\
 	scap.xccdf.SubUseEnumType	\
+	scap.xccdf.TailoringBenchmarkReferenceType	\
+	scap.xccdf.TailoringReferenceType	\
 	scap.xccdf.TailoringType	\
+	scap.xccdf.TailoringVersionType	\
 	scap.xccdf.TargetFactsType	\
+	scap.xccdf.TargetIdRefType	\
 	scap.xccdf.TestResultType	\
 	scap.xccdf.TextType	\
 	scap.xccdf.TextWithSubType	\
